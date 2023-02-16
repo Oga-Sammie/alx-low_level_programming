@@ -3,7 +3,7 @@
 
 /**
 * main - prints exactly the statement
-* 
+*
 * Return: Always 1 (Success)
 */
 
