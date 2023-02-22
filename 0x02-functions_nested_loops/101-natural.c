@@ -10,12 +10,13 @@ int main(void)
 
 	sum = 0;
 
-	for (x = 0; x < 1024; x++)
+	while (x < 1024)
 	{
 		if ((x % 3 == 0) || (x % 5 == 0))
 		{
 			sum += x;
 		}
+		x++;
 	}
 	printf("%d\n", sum);
 	return (0);
