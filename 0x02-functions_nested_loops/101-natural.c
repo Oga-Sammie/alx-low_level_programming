@@ -6,18 +6,19 @@
 */
 int main(void)
 {
-	int x; sum;
+	int x;
+	int y;
 
-	sum = 0;
+	y = 0;
 
 	while (x < 1024)
 	{
 		if ((x % 3 == 0) || (x % 5 == 0))
 		{
-			sum += x;
+			y += x;
 		}
 		x++;
 	}
-	printf("%d\n", sum);
+	printf("%d\n", y);
 	return (0);
 }
