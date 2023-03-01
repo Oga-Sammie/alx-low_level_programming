@@ -8,19 +8,20 @@
 
 char *leet(char *n)
 {
-
-	int a[11] = {'a', 'A', 'e', 'E', 'o', 'O', 't', 'T', 'l', 'L'};
-	int b[11] = {'4', '4', '3', '3', '0', '0', '7', '7', '1', '1'};
-
 	int x;
 	int y;
+	int search[] = {'a', 'A', 'e', 'E', 'o', 'O', 't', 'T', 'l', 'L'};
+	int change[] = {'4', '3', '0', '7', '1'};
 
-	for (y = 0; n[y] != '\0'; y++)
+	for (x = 0; n[x] != '\0'; x++)
 	{
-		for (x = 0; a[x] != '\0'; x++)
+		for (y = 0; y <= 9; y++)
 		{
-			if (n[y] == n[x])
-				n[y] = b[x];
+			if (n[x] == search[y])
+			{
+				n[x] = change[y / 2];
+				y = 9;
+			}
 		}
 	}
 	return (n);
